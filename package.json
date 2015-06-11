@@ -1,0 +1,17 @@
+{
+  "name": "TestProject",
+  "version": "0.0.1",
+  "description": "This is a test nodejs project",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^1.2.1",
+    "express": "^4.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
