@@ -19,6 +19,8 @@
     <Compile Include="index.js" />
     <Compile Include="public\scripts\main\main.js" />
     <Compile Include="public\scripts\main\mainController.js" />
+    <Compile Include="public\scripts\observation\session\sessionModel.js" />
+    <Compile Include="public\scripts\observation\site\siteModel.js" />
     <Compile Include="public\vendor\angular\angular.js" />
     <Compile Include="public\vendor\angular\angular.min.js" />
     <Compile Include="router.js" />
@@ -29,6 +31,9 @@
     <Folder Include="public\css\" />
     <Folder Include="public\scripts\" />
     <Folder Include="public\scripts\main\" />
+    <Folder Include="public\scripts\observation\" />
+    <Folder Include="public\scripts\observation\site\" />
+    <Folder Include="public\scripts\observation\session\" />
     <Folder Include="public\vendor\" />
     <Folder Include="public\vendor\angular\" />
   </ItemGroup>
@@ -36,6 +41,9 @@
     <Content Include="public\css\style.css" />
     <Content Include="public\index.html" />
     <Content Include="public\scripts\main\main.html" />
+    <Content Include="public\scripts\observation\session\session.html" />
+    <Content Include="public\scripts\observation\session\sessionController.js" />
+    <Content Include="public\scripts\observation\site\site.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
