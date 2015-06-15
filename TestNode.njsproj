@@ -17,9 +17,13 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="index.js" />
+    <Compile Include="public\scripts\localization\locale-en.js" />
+    <Compile Include="public\scripts\localization\localization.js" />
     <Compile Include="public\scripts\main\main.js" />
     <Compile Include="public\scripts\main\mainController.js" />
+    <Compile Include="public\scripts\observation\observation.js" />
     <Compile Include="public\scripts\observation\session\sessionModel.js" />
+    <Compile Include="public\scripts\observation\site\siteControllerjs.js" />
     <Compile Include="public\scripts\observation\site\siteModel.js" />
     <Compile Include="public\vendor\angular\angular.js" />
     <Compile Include="public\vendor\angular\angular.min.js" />
@@ -31,6 +35,7 @@
     <Folder Include="public\css\" />
     <Folder Include="public\scripts\" />
     <Folder Include="public\scripts\main\" />
+    <Folder Include="public\scripts\localization\" />
     <Folder Include="public\scripts\observation\" />
     <Folder Include="public\scripts\observation\site\" />
     <Folder Include="public\scripts\observation\session\" />
