@@ -1,1 +1,1 @@
-﻿angular.module('observationManager.app', ['observationManager.observation', 'observationManager.localization'])
+﻿angular.module('observationManager.app', ['observationManager.common', 'observationManager.observation', 'observationManager.localization'])

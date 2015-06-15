@@ -7,24 +7,53 @@
  //           <comments><![CDATA[Beer]]></comments>
  //</session>
 
-session = function(options) {
-    if (options) {
-        
-    }
-};
+angular.module('observationManager.observation').factory('omSession', function () {
 
-session.prototype.id = '';
+    var session = function (options) {
+        if (options) {
+            if (options.hasOwnProperty('id')) {
+                this.id = options.id;
+            }
+            if (options.hasOwnProperty('lang')) {
+                this.lang = options.lang;
+            }
+            if (options.hasOwnProperty('begin')) {
+                this.begin = options.begin;
+            }
+            if (options.hasOwnProperty('end')) {
+                this.end = options.end;
+            }
+            if (options.hasOwnProperty('site')) {
+                this.site = options.site;
+            }
+            if (options.hasOwnProperty('weather')) {
+                this.weather = options.weather;
+            }
+            if (options.hasOwnProperty('equipment')) {
+                this.equipment = options.equipment;
+            }
+            if (options.hasOwnProperty('comments')) {
+                this.comments = options.comments;
+            }
+        }
+    };
+    
+    session.prototype.id = '';
+    
+    session.prototype.lang = '';
+    
+    session.prototype.begin = null;
+    
+    session.prototype.end = null;
+    
+    session.prototype.site = null;
+    
+    session.prototype.weather = '';
+    
+    session.prototype.equipment = '';
+    
+    session.prototype.comments = '';
 
-session.prototype.lang = '';
+    return session;
 
-session.prototype.begin = null;
-
-session.prototype.end = null;
-
-session.prototype.site = null;
-
-session.prototype.weather = '';
-
-session.prototype.equipment = '';
-
-session.prototype.comments = '';
+});

@@ -5,16 +5,37 @@
 //            <timezone>2</timezone>
 //        </site>
 
-site = function() {
+angular.module('observationManager.observation').factory('omSite', function() {
+    
+    var site = function (options) {
+        if (options) {
+            if (options.hasOwnProperty('id')) {
+                this.id = options.id;
+            }
+            if (options.hasOwnProperty('name')) {
+                this.name = options.name;
+            }
+            if (options.hasOwnProperty('longitude')) {
+                this.longitude = options.longitude;
+            }
+            if (options.hasOwnProperty('latitude')) {
+                this.latitude = options.latitude;
+            }
+            if (options.hasOwnProperty('timezone')) {
+                this.timezone = options.timezone;
+            }
+        }
+    };
 
-};
+    site.prototype.id = '';
+    
+    site.prototype.name = '';
+    
+    site.prototype.longitude = null;
+    
+    site.prototype.latitude = null;
+    
+    site.prototype.timezone = 0;
 
-site.prototype.id = '';
-
-site.prototype.name = '';
-
-site.prototype.longitude = null;
-
-site.prototype.latitude = null;
-
-site.prototype.timezone = 0;
+    return site;
+});

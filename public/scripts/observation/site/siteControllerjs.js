@@ -1,6 +1,6 @@
-﻿angulare.module('observationManager.observation').controller('omSiteController', [
-    '$scope', function($scope) {
-        $scope.site = new site({
+﻿angular.module('observationManager.observation').controller('omSiteController', [
+    '$scope', 'omSite', function($scope, omSite) {
+        $scope.site = new omSite({
             id: 'some guid',
             name: 'Saratov',
             longitude: {

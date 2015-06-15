@@ -16,7 +16,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="Gruntfile.js" />
     <Compile Include="index.js" />
+    <Compile Include="public\scripts\common\common.js" />
     <Compile Include="public\scripts\localization\locale-en.js" />
     <Compile Include="public\scripts\localization\localization.js" />
     <Compile Include="public\scripts\main\main.js" />
@@ -25,8 +27,11 @@
     <Compile Include="public\scripts\observation\session\sessionModel.js" />
     <Compile Include="public\scripts\observation\site\siteControllerjs.js" />
     <Compile Include="public\scripts\observation\site\siteModel.js" />
+    <Compile Include="public\vendor\angular\angular-translate.js" />
+    <Compile Include="public\vendor\angular\angular-translate.min.js" />
     <Compile Include="public\vendor\angular\angular.js" />
     <Compile Include="public\vendor\angular\angular.min.js" />
+    <Compile Include="public\vendor\UUID\uuid.js" />
     <Compile Include="router.js" />
     <Compile Include="server.js" />
   </ItemGroup>
@@ -36,13 +41,16 @@
     <Folder Include="public\scripts\" />
     <Folder Include="public\scripts\main\" />
     <Folder Include="public\scripts\localization\" />
+    <Folder Include="public\scripts\common\" />
     <Folder Include="public\scripts\observation\" />
     <Folder Include="public\scripts\observation\site\" />
     <Folder Include="public\scripts\observation\session\" />
     <Folder Include="public\vendor\" />
     <Folder Include="public\vendor\angular\" />
+    <Folder Include="public\vendor\uuid\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="package.json" />
     <Content Include="public\css\style.css" />
     <Content Include="public\index.html" />
     <Content Include="public\scripts\main\main.html" />

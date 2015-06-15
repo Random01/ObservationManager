@@ -1,26 +1,28 @@
-﻿<div>
-    <div>{{LANGUAGE|translate}}</div>
-    <div>Select</div>
+﻿<div class="om-session-form"
+     ng-controller="omSessionController">
+    <div>{{'OM.LANGUAGE'|translate}}</div>
+    <select ng-options="language.name for language in languages"
+            ng-model="session.lang"></select>
 
-    <div>{{BEGIN|translate}}</div>
-    <div>Date Picker</div>
+    <div>{{'OM.BEGIN'|translate}}</div>
+    <input type="text" ng-model="session.begin" />
 
-    <div>{{END|translate}}</div>
-    <div>Date Picker</div>
+    <div>{{'OM.END'|translate}}</div>
+    <input type="text" ng-model="session.end" />
 
-    <div>{{WEATHER|translate}}</div>
-    <div>Textarea</div>
+    <div>{{'OM.WEATHER'|translate}}</div>
+    <textarea ng-model="session.weather"></textarea>
 
-    <div>{{EQUIPMENT|translate}}</div>
-    <div>Textarea</div>
+    <div>{{'OM.EQUIPMENT'|translate}}</div>
+    <textarea ng-model="session.equipment"></textarea>
 
-    <div>{{COMMENTS|translate}}</div>
-    <div>Textarea</div>
+    <div>{{'OM.COMMENTS'|translate}}</div>
+    <textarea ng-model="session.comments"></textarea>
 
-    <div>{{SITE|translate}}</div>
+    <div>{{'OM.SITE'|translate}}</div>
     <div>
         <div>Select</div>
-        <button>{{NEW_SITE|translate}}</button>
+        <button>{{'OM.NEW_SITE'|translate}}</button>
     </div>
 
 </div>
