@@ -1,7 +1,7 @@
 ﻿<div class="om-session-form"
      ng-controller="omSessionController">
     <div>{{'OM.LANGUAGE'|translate}}</div>
-    <select ng-options="language.name for language in languages"
+    <select ng-options="language.text for language in languages"
             ng-model="session.lang"></select>
 
     <div>{{'OM.BEGIN'|translate}}</div>
@@ -20,9 +20,8 @@
     <textarea ng-model="session.comments"></textarea>
 
     <div>{{'OM.SITE'|translate}}</div>
-    <div>
-        <div>Select</div>
-        <button>{{'OM.NEW_SITE'|translate}}</button>
-    </div>
+    <select ng-options="site.name for site in sites"
+            ng-model="session.site"></select>
+    <button>{{'OM.NEW_SITE'|translate}}</button>
 
 </div>

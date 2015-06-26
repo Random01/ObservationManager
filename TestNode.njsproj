@@ -24,6 +24,13 @@
     <Compile Include="public\scripts\main\main.js" />
     <Compile Include="public\scripts\main\mainController.js" />
     <Compile Include="public\scripts\observation\observation.js" />
+    <Compile Include="public\scripts\observation\observation\observationManager.js" />
+    <Compile Include="public\scripts\observation\observation\observationModel.js" />
+    <Compile Include="public\scripts\observation\observation\observationsController.js" />
+    <Compile Include="public\scripts\observation\scope\scopeController.js" />
+    <Compile Include="public\scripts\observation\scope\scopeManager.js" />
+    <Compile Include="public\scripts\observation\scope\scopeModel.js" />
+    <Compile Include="public\scripts\observation\scope\scopesController.js" />
     <Compile Include="public\scripts\observation\session\sessionModel.js" />
     <Compile Include="public\scripts\observation\site\siteControllerjs.js" />
     <Compile Include="public\scripts\observation\site\siteModel.js" />
@@ -43,6 +50,8 @@
     <Folder Include="public\scripts\localization\" />
     <Folder Include="public\scripts\common\" />
     <Folder Include="public\scripts\observation\" />
+    <Folder Include="public\scripts\observation\scope\" />
+    <Folder Include="public\scripts\observation\observation\" />
     <Folder Include="public\scripts\observation\site\" />
     <Folder Include="public\scripts\observation\session\" />
     <Folder Include="public\vendor\" />
@@ -54,6 +63,9 @@
     <Content Include="public\css\style.css" />
     <Content Include="public\index.html" />
     <Content Include="public\scripts\main\main.html" />
+    <Content Include="public\scripts\observation\observation\observations.html" />
+    <Content Include="public\scripts\observation\scope\scope.html" />
+    <Content Include="public\scripts\observation\scope\scopes.html" />
     <Content Include="public\scripts\observation\session\session.html" />
     <Content Include="public\scripts\observation\session\sessionController.js" />
     <Content Include="public\scripts\observation\site\site.html" />
