@@ -1,9 +1,19 @@
 ﻿angular.module('observationManager.observation').controller('omScopeController', [
-    '$scope', function($scope) {
-        $scope.scope = {
-            model: 'C8-N',
-            aperture: 200,
-            focalLength: 1000
-        }
+    '$scope', 'omScope', 'omScopeManager', '$location',
+    function ($scope, omScope, omScopeManager, $location) {
+        $scope.scope = new omScope();
+
+        $scope.create = function () {
+            if ($scope.scope.isValid()) {
+                omScopeManager.add($scope.scope).then(function () {
+                    $location.path('scopes');
+                });
+            }
+        };
+
+        $scope.cancel = function() {
+            $location.path('scopes');
+        };
+
     }
 ]);

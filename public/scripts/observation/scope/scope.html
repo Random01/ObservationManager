@@ -1,13 +1,17 @@
-﻿<div ng-controller="omScopeController">
+﻿<div>
     <div>{{'OM.MODEL'|translate}}</div>
     <input type="text"
-           ng-model="scope.model" />
+           ng-model="scope.model"/>
 
     <div>{{'OM.APERTURE'|translate}}</div>
     <input type="text"
-           ng-model="scope.aperture" />
+           ng-model="scope.aperture"/>
 
     <div>{{'OM.FOCAL_LENGTH'|translate}}</div>
     <input type="text"
-           ng-model="scope.focalLength" />
+           ng-model="scope.focalLength"/>
+</div>
+<div>
+    <button ng-click="create()">{{'OM.ADD'|translate}}</button>
+    <button ng-click="cancel()">{{'OM.CANCEL'|translate}}</button>
 </div>

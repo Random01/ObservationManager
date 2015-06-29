@@ -14,7 +14,12 @@
                 EQUIPMENT: 'Equipment',
                 COMMENTS: 'Comments',
                 SITE: 'Site',
-                NEW_SITE: 'New Site'
+                NEW_SITE: 'New Site',
+                MODEL: 'Model',
+                APERTURE: 'Aperture',
+                FOCAL_LENGTH: 'Focal length',
+                ADD: 'Add',
+                CANCEL: 'Cancel'
             }
         });
     }

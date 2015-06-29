@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         'angular-builder': {
             options: {
                 main: 'observationManager.app',
-                externalModules: ['pascalprecht.translate'],
+                externalModules: ['pascalprecht.translate', 'ngRoute', 'ngResource'],
                 rebaseDebugUrls: [{ match: 'public/', replaceWith: '' }]
             },
             app: {
