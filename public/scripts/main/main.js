@@ -7,6 +7,14 @@ omApp.config([
         'use strict';
 
         $routeProvider
+            .when('/sites', {
+                templateUrl: 'scripts/observation/site/sites.html',
+                controller: 'omSitesController'
+            })
+            .when('/sites/create', {
+                templateUrl: 'scripts/observation/site/site.html',
+                controller: 'omSiteController'
+            })
             .when('/observations', {
                 templateUrl: 'scripts/observation/observation/observations.html',
                 controller: 'omObservationsController'

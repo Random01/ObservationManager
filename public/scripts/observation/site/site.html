@@ -1,5 +1,4 @@
-﻿<div class="om-site-form"
-     ng-controller="omSiteController">
+﻿<div class="om-site-form">
     <div>{{'OM.NAME'|translate}}</div>
     <input type="text"
            class="om-textbox"
@@ -8,15 +7,25 @@
     <div>{{'OM.LONGITUDE'|translate}}</div>
     <input type="text"
            class="om-textbox"
-           ng-model="site.longitude.value" />
+           ng-model="site.longitude.value"/>
 
     <div>{{'OM.LATITUDE'|translate}}</div>
     <input type="text"
            class="om-textbox"
-           ng-model="site.latitude.value" />
+           ng-model="site.latitude.value"/>
 
     <div>{{'OM.TIME_ZONE'|translate}}</div>
     <input type="text"
            class="om-textbox"
-           ng-model="site.timezone" />
+           ng-model="site.timezone"/>
+</div>
+<div>
+    <button class="om-create-button"
+            ng-click="create()">
+        {{'OM.ADD'|translate}}
+    </button>
+    <button class="om-cancel-button"
+            ng-click="cancel()">
+        {{'OM.CANCEL'|translate}}
+    </button>
 </div>

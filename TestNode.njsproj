@@ -19,6 +19,7 @@
     <Compile Include="Gruntfile.js" />
     <Compile Include="index.js" />
     <Compile Include="public\scripts\common\common.js" />
+    <Compile Include="public\scripts\common\lodashFactory.js" />
     <Compile Include="public\scripts\localization\locale-en.js" />
     <Compile Include="public\scripts\localization\localization.js" />
     <Compile Include="public\scripts\main\main.js" />
@@ -28,12 +29,15 @@
     <Compile Include="public\scripts\observation\observation\observationModel.js" />
     <Compile Include="public\scripts\observation\observation\observationsController.js" />
     <Compile Include="public\scripts\observation\scope\scopeController.js" />
+    <Compile Include="public\scripts\observation\scope\scopeControllerSpec.js" />
     <Compile Include="public\scripts\observation\scope\scopeManager.js" />
     <Compile Include="public\scripts\observation\scope\scopeModel.js" />
     <Compile Include="public\scripts\observation\scope\scopesController.js" />
     <Compile Include="public\scripts\observation\session\sessionModel.js" />
-    <Compile Include="public\scripts\observation\site\siteControllerjs.js" />
+    <Compile Include="public\scripts\observation\site\siteController.js" />
+    <Compile Include="public\scripts\observation\site\siteManager.js" />
     <Compile Include="public\scripts\observation\site\siteModel.js" />
+    <Compile Include="public\scripts\observation\site\sitesController.js" />
     <Compile Include="public\vendor\angular\angular-resource.js" />
     <Compile Include="public\vendor\angular\angular-resource.min.js" />
     <Compile Include="public\vendor\angular\angular-route.js" />
@@ -42,6 +46,7 @@
     <Compile Include="public\vendor\angular\angular-translate.min.js" />
     <Compile Include="public\vendor\angular\angular.js" />
     <Compile Include="public\vendor\angular\angular.min.js" />
+    <Compile Include="public\vendor\lodash\lodash.js" />
     <Compile Include="public\vendor\UUID\uuid.js" />
     <Compile Include="router.js" />
     <Compile Include="server.js" />
@@ -60,6 +65,7 @@
     <Folder Include="public\scripts\observation\session\" />
     <Folder Include="public\vendor\" />
     <Folder Include="public\vendor\angular\" />
+    <Folder Include="public\vendor\lodash\" />
     <Folder Include="public\vendor\uuid\" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +79,7 @@
     <Content Include="public\scripts\observation\session\session.html" />
     <Content Include="public\scripts\observation\session\sessionController.js" />
     <Content Include="public\scripts\observation\site\site.html" />
+    <Content Include="public\scripts\observation\site\sites.html" />
     <Content Include="public\vendor\angular\angular-resource.min.js.map" />
     <Content Include="public\vendor\angular\angular-route.min.js.map" />
   </ItemGroup>

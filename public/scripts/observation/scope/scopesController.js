@@ -3,7 +3,9 @@
     function ($scope, omScopeManager) {
         'use strict';
 
-        omScopeManager.getAllScopes().then(function(scopes) {
+        $scope.isLoading = true;
+        omScopeManager.getAllScopes().then(function (scopes) {
+            $scope.isLoading = true;
             $scope.scopes = scopes;
         });
 

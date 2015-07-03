@@ -1,0 +1,13 @@
+﻿<div>
+    <a href="#sites/create">{{'OM.ADD_NEW_SITE'|translate}}</a>
+
+    <div ng-repeat="site in sites">
+        <div>{{site.name}}</div>
+        <div>
+            <a ng-href="#sites/edit/{{site.id}}">{{'OM.EDIT'|translate}}</a>
+        </div>
+        <div>
+            <a ng-href="#sites/delete/{{site.id}}">{{'OM.DELETE'|translate}}</a>
+        </div>
+    </div>
+</div>

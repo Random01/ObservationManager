@@ -36,7 +36,12 @@
 
 
     $templateCache.put('scripts/observation/site/site.html',
-      "<div class=\"om-site-form\" ng-controller=\"omSiteController\"><div>{{'OM.NAME'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.name\"/><div>{{'OM.LONGITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.longitude.value\"/><div>{{'OM.LATITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.latitude.value\"/><div>{{'OM.TIME_ZONE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.timezone\"/></div>"
+      "<div class=\"om-site-form\"><div>{{'OM.NAME'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.name\"/><div>{{'OM.LONGITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.longitude.value\"/><div>{{'OM.LATITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.latitude.value\"/><div>{{'OM.TIME_ZONE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.timezone\"/></div>"
+    );
+
+
+    $templateCache.put('scripts/observation/site/sites.html',
+      "<div><a href=\"#sites/create\">{{'OM.CREATE_NEW_SITE'|translate}}</a><div ng-repeat=\"site in sites\"><div>{{scope.name}}</div><div><a ng-href=\"#sites/edit/{{scope.id}}\">{{'OM.CREATE'|translate}}</a></div><div><a ng-href=\"#sites/delete/{{scope.id}}\">{{'OM.DELETE'|translate}}</a></div></div></div>"
     );
   }]);
 
@@ -48,7 +53,10 @@
 
 
   module.factory('omObservationManager', [
-      function() {
+      '$q',
+      function ($q) {
+
+          'use strict';
 
           var service = {};
 
@@ -156,8 +164,13 @@
   ]);
   module.factory('omScope', function() {
 
+      'use strict';
+
       var scope = function (options) {
           if (options) {
+              if (options.hasOwnProperty('id')) {
+                  this.id = options.id;
+              }
               if (options.hasOwnProperty('model')) {
                   this.model = options.model;
               }
@@ -170,8 +183,12 @@
           }
       };
 
+      scope.prototype.id = null;
+
       scope.prototype.model = null;
+
       scope.prototype.aperture = null;
+
       scope.prototype.focalLength = null;
 
       scope.prototype.isValid = function() {
@@ -186,7 +203,9 @@
       function ($scope, omScopeManager) {
           'use strict';
 
-          omScopeManager.getAllScopes().then(function(scopes) {
+          $scope.isLoading = true;
+          omScopeManager.getAllScopes().then(function (scopes) {
+              $scope.isLoading = true;
               $scope.scopes = scopes;
           });
 
@@ -287,6 +306,45 @@
           });
       }
   ]);
+  module.factory('omSiteManager', [
+      '$q', 'omSite',
+      function ($q, omSite) {
+          'use strict';
+
+          var service = {};
+
+          service.getAllSites = function (request) {
+              var sites = [
+                  new omSite({
+                      name: 'Saratov'
+                  }),
+                  new omSite({
+                      name: 'Mokrous'
+                  })
+              ];
+
+              return $q.when(sites);
+          };
+
+          service.add = function() {
+
+          };
+
+          service.update = function() {
+
+          };
+
+          service.delete = function() {
+
+          };
+
+          service.getsiteById = function() {
+
+          };
+
+          return service;
+      }
+  ]);
   //<site id="OM912a8da2984b423eaa63fb34e3967b32">
   //            <name><![CDATA[Saratov]]></name>
   //            <longitude unit="deg">51.53</longitude>
@@ -316,9 +374,9 @@
           }
       };
 
-      site.prototype.id = '';
+      site.prototype.id = null;
 
-      site.prototype.name = '';
+      site.prototype.name = null;
 
       site.prototype.longitude = null;
 
@@ -326,8 +384,19 @@
 
       site.prototype.timezone = 0;
 
+      site.prototype.isValid = function() {
+          return true;
+      };
+
       return site;
   });
+  module.controller('omSitesController', [
+      '$scope', 'omSiteManager', function ($scope, omSiteManager) {
+          omSiteManager.getAllScopes().then(function(sites) {
+              $scope.sites = sites;
+          });
+      }
+  ]);
 
 }) (angular.module ('observationManager.observation', []));
 

@@ -12,8 +12,10 @@ document.write ('\
 <script src="scripts/observation/scope/scopesController.js"></script>\
 <script src="scripts/observation/session/sessionController.js"></script>\
 <script src="scripts/observation/session/sessionModel.js"></script>\
-<script src="scripts/observation/site/siteControllerjs.js"></script>\
+<script src="scripts/observation/site/siteController.js"></script>\
+<script src="scripts/observation/site/siteManager.js"></script>\
 <script src="scripts/observation/site/siteModel.js"></script>\
+<script src="scripts/observation/site/sitesController.js"></script>\
 <script src="scripts/localization/localization.js"></script>\
 <script src="scripts/localization/locale-en.js"></script>\
 <script src="scripts/main/main.js"></script>\

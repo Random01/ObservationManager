@@ -19,7 +19,10 @@
                 APERTURE: 'Aperture',
                 FOCAL_LENGTH: 'Focal length',
                 ADD: 'Add',
-                CANCEL: 'Cancel'
+                CANCEL: 'Cancel',
+                ADD_NEW_SITE: 'Add New Site',
+                DELETE: 'Delete',
+                EDIT: 'Edit'
             }
         });
     }

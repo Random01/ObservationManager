@@ -1,7 +1,12 @@
 ﻿angular.module('observationManager.observation').factory('omScope', function() {
 
+    'use strict';
+
     var scope = function (options) {
         if (options) {
+            if (options.hasOwnProperty('id')) {
+                this.id = options.id;
+            }
             if (options.hasOwnProperty('model')) {
                 this.model = options.model;
             }
@@ -14,8 +19,12 @@
         }
     };
 
+    scope.prototype.id = null;
+
     scope.prototype.model = null;
+
     scope.prototype.aperture = null;
+
     scope.prototype.focalLength = null;
 
     scope.prototype.isValid = function() {

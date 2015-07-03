@@ -1,5 +1,8 @@
 ﻿angular.module('observationManager.observation').factory('omObservationManager', [
-    function() {
+    '$q',
+    function ($q) {
+
+        'use strict';
 
         var service = {};
 

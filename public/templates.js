@@ -26,6 +26,11 @@ angular.module('observationManager.common').run(['$templateCache', function($tem
 
 
   $templateCache.put('scripts/observation/site/site.html',
-    "<div class=\"om-site-form\" ng-controller=\"omSiteController\"><div>{{'OM.NAME'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.name\"/><div>{{'OM.LONGITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.longitude.value\"/><div>{{'OM.LATITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.latitude.value\"/><div>{{'OM.TIME_ZONE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.timezone\"/></div>"
+    "<div class=\"om-site-form\"><div>{{'OM.NAME'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.name\"/><div>{{'OM.LONGITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.longitude.value\"/><div>{{'OM.LATITUDE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.latitude.value\"/><div>{{'OM.TIME_ZONE'|translate}}</div><input type=\"text\" class=\"om-textbox\" ng-model=\"site.timezone\"/></div>"
+  );
+
+
+  $templateCache.put('scripts/observation/site/sites.html',
+    "<div><a href=\"#sites/create\">{{'OM.CREATE_NEW_SITE'|translate}}</a><div ng-repeat=\"site in sites\"><div>{{scope.name}}</div><div><a ng-href=\"#sites/edit/{{scope.id}}\">{{'OM.CREATE'|translate}}</a></div><div><a ng-href=\"#sites/delete/{{scope.id}}\">{{'OM.DELETE'|translate}}</a></div></div></div>"
   );
 }]);

@@ -27,15 +27,19 @@ angular.module('observationManager.observation').factory('omSite', function() {
         }
     };
 
-    site.prototype.id = '';
+    site.prototype.id = null;
     
-    site.prototype.name = '';
+    site.prototype.name = null;
     
     site.prototype.longitude = null;
     
     site.prototype.latitude = null;
     
     site.prototype.timezone = 0;
+
+    site.prototype.isValid = function() {
+        return true;
+    };
 
     return site;
 });
